@@ -8,7 +8,6 @@ const output = document.getElementById("output");
 let nameListText =" ";
 const namelist = [];
 signIn.addEventListener("click", () => {
-    console.log(lastName.value);
     const reg = {
         name : firstName.value,
         last : lastName.value,
@@ -16,7 +15,16 @@ signIn.addEventListener("click", () => {
         parent : parentName.value,
     };
     namelist.push(reg)
+    console.log(namelist);
+    namelist.forEach( (reg,index) => {
+
+        nameListText = nameListText + namelist[index];
+        output.innerHTML = nameListText;
+  
+    });
+
     
+
     console.log(reg);
     // nameListText += "<li> esm: " + reg.name + ' ' + "famil : " + reg.last + "code meli " + reg.code + "parent name: " + reg.parent;
     // output.innerHTML= nameListText;
