@@ -16,13 +16,13 @@ signIn.addEventListener("click", () => {
     };
     namelist.push(reg)
     console.log(namelist);
-    namelist.forEach( (reg,index) => {
+    namelist.forEach( (value,index) => {
 
-        nameListText = nameListText + namelist[index];
-        output.innerHTML = nameListText;
-  
+        nameListText += "<li>" + namelist[index].name + namelist[index].last + namelist[index].code + namelist[index].parent + "</li>";
+        
+
     });
-
+    output.innerHTML = nameListText;
     
 
     console.log(reg);
